@@ -1,29 +1,240 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
+<head>
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>GrimoireMobile</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Grimoire Mobile</title>
+</head>
+<body>
+    <!--Main Page-->
+    <div data-role="page" id="main" data-theme="b">
+        <div data-role="header" class="header">
+            <h1>Grimoire</h1>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true" data-theme="b">
+                <!--Guardian-->
+                <li>
+                    <a href="#guardian" data-transition="slide">
+                        <img src="images/guardian.JPG">
+                        <h2>Guardian</h2>
+                        <p>Tap to Explore</p>
+                    </a>
+                </li>
+                <!--Inventory-->
+                <li>
+                    <a href="#inventory" data-transition="slide">
+                        <img src="images/inventory.JPG">
+                        <h2>Inventory</h2>
+                        <p>Tap to Explore</p>
+                    </a>
+                </li>
+                <!--Allies-->
+                <li>
+                    <a href="#allies" data-transition="slide">
+                        <img src="images/allies.JPG">
+                        <h2>Allies</h2>
+                        <p>Tap to explore</p>
+                    </a>
+                </li>
+                <!--Enemies-->
+                <li>
+                    <a href="#enemies" data-transition="slide">
+                        <img src="images/enemies.JPG">
+                        <h2>Enemies</h2>
+                        <p>Tap to Explore</p>
+                    </a>
+                </li>
+                <!--Locations-->
+                <li>
+                    <a href="#location" data-transition="slide">
+                        <img src="images/locations.JPG">
+                        <h2>Locations</h2>
+                        <p>Tap to Explore</p>
+                    </a>
+                </li>
+                <!--Activities-->
+                <li>
+                    <a href="#activities" data-transition="slide">
+                        <img src="images/activities.JPG">
+                        <h2>Activities</h2>
+                        <p>Tap to Explore</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Guardian Page-->
+    <div data-role="page" id="guardian" data-theme="b" data-content-theme="b">
+        <div data-role="header" class="header">
+            <h1>Grimoire - Guardian</h1>
+            <a href="#main" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-transition="slide" data-direction="reverse" data-theme="b"></a>
+        </div>
+        <div role="main" class="ui-content" data-filter="true" data-filter-placeholder="Search...">
+            <!--Classes-->
+            <div data-role="collapsible">
+                <h2>Classes</h2>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
+                    <li><a href="#">Guardians</a></li>
+                    <li><a href="#">Ghost Fragment: Titan</a></li>
+                    <li><a href="#">Hunter</a></li>
+                    <li><a href="#">Ghost Fragment: Hunter</a></li>
+                    <li><a href="#">Warlock</a></li>
+                    <li><a href="#">Ghost Fragment: Warlock</a></li>
+                    <li><a href="#">Ghost Fragment: Warlock 2</a></li>
+                    <li><a href="#">The Guardian</a></li>
+                </ul>
+            </div>
+            <!--Races-->
+            <div data-role="collapsible">
+                <h2>Races</h2>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
+                    <li><a href="#">Human</a></li>
+                    <li><a href="#">Ghost Fragment: Human</a></li>
+                    <li><a href="#">Ghost Fragment: Human 2</a></li>
+                    <li><a href="#">Ghost Fragment: Human 3</a></li>
+                    <li><a href="#">Ghost Fragment: Human 4</a></li>
+                    <li><a href="#">Ghost Fragment: Human 5</a></li>
+                    <li><a href="#">Awoken</a></li>
+                    <li><a href="#">Ghost Fragment: Awoken</a></li>
+                    <li><a href="#">Ghost Fragment: Awoken 2</a></li>
+                    <li><a href="#">Ghost Fragment: Awoken 3</a></li>
+                    <li><a href="#">Exo</a></li>
+                    <li><a href="#">Ghost Fragment: Exo</a></li>
+                    <li><a href="#">Ghost Fragment: Exo 2</a></li>
+                    <li><a href="#">Ghost Fragment: Exo 3</a></li>
+                </ul>
+            </div>
+            <!--Ghost-->
+            <div data-role="collapsible">
+                <h2>Ghost</h2>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
+                    <li><a href="#">Ghosts</a></li>
+                    <li><a href="#">Dead Ghosts</a></li>
+                    <li><a href="#">Ghost Fragment: Ghosts</a></li>
+                    <li><a href="#">Ghost Fragment: Ghosts 2</a></li>
+                </ul>
+            </div>
+            <!--Sub-Classes-->
+            <div data-role="collapsible">
+                <h2>Sub-Classes</h2>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
+                    <li><a href="#">Guardian Abilities</a></li>
+                    <li><a href="#">Ghost Fragment: Abilities</a></li>
+                    <li><a href="#">Striker</a></li>
+                    <li><a href="#">Defender</a></li>
+                    <li><a href="#">Sunbreaker</a></li>
+                    <li><a href="#">Gunslinger</a></li>
+                    <li><a href="#">Bladedancer</a></li>
+                    <li><a href="#">Nightstalker</a></li>
+                    <li><a href="#">Sunsinger</a></li>
+                    <li><a href="#">Stormcaller</a></li>
+                    <li><a href="#">Voidwalker</a></li>
+                </ul>
+            </div>
+            <!--Melee Abilities-->
+            <div data-role="collapsible">
+                <h2>Melee Abilities</h2>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
+                    <li><a href="#">Punch</a></li>
+                    <li><a href="#">Stab</a></li>
+                    <li><a href="#">Palm</a></li>
+                </ul>
+            </div>
+            <!--Grenade Abilities-->
+            <div data-role="collapsible">
+                <h2>Grenade Abilities</h2>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search...">
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <!--<img src="images/classes.jpg" width="60" height="60" />
+            <div data-role="collapsible" data-theme="b">
+                <h2>Classes</h2>
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search..." data-theme="b">
+                    <li>
+                        <a href="#classes" data-transition="slide">
+                            <img src="images/classes.jpg">
+                            <h2>Classes</h2>
+                        </a>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+
+    <!--Inventory Page-->
+    <div data-role="page" id="inventory" data-theme="b">
+        <div data-role="header" class="header">
+            <h1>Grimoire - Inventory</h1>
+            <a href="#main" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-transition="slide" data-direction="reverse" data-theme="b"></a>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Testing</p>
+        </div>
+    </div>
+
+    <!--Allies Page-->
+    <div data-role="page" id="allies" data-theme="b">
+        <div data-role="header" class="header">
+            <h1>Grimoire - Allies</h1>
+            <a href="#main" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-transition="slide" data-direction="reverse" data-theme="b"></a>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Testing</p>
+        </div>
+    </div>
+
+    <!--Enemies Page-->
+    <div data-role="page" id="enemies" data-theme="b">
+        <div data-role="header" class="header">
+            <h1>Grimoire - Enemies</h1>
+            <a href="#main" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-transition="slide" data-direction="reverse" data-theme="b"></a>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Testing</p>
+        </div>
+    </div>
+
+    <!--Locations Page-->
+    <div data-role="page" id="locations" data-theme="b">
+        <div data-role="header" class="header">
+            <h1>Grimoire - Locations</h1>
+            <a href="#main" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-transition="slide" data-direction="reverse" data-theme="b"></a>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Testing</p>
+        </div>
+    </div>
+
+    <!--Activities Page-->
+    <div data-role="page" id="activities" data-theme="b">
+        <div data-role="header" class="header">
+            <h1>Grimoire - Activities</h1>
+            <a href="#main" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-transition="slide" data-direction="reverse" data-theme="b"></a>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Testing</p>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="scripts/jquery-1.8.0.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+</body>
 </html>
